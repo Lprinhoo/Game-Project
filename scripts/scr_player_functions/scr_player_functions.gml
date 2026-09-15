@@ -8,6 +8,9 @@ function player_get_control() {
 		
 	key_jump = keyboard_check(vk_space);
 		key_jump = clamp(key_jump, 0, 1);
+		
+	key_dash = keyboard_check(vk_shift);
+		key_dash = clamp(key_dash, 0, 1);
 	
 }
 	
@@ -19,6 +22,7 @@ function player_set_variables() {
 	
 	coyote_count = 0;
 	has_jump     = false;
+	dash         = true;
 }
 
 function player_set_sprite() {
@@ -78,10 +82,16 @@ function player_set_moviment() {
 		
 		coyote_count = max_coyote;
 		has_jump     = false;
+		dash		 = true;
 
 	} else {
 		if(coyote_count > 0) {coyote_count--;}
-		vspd = min(vspd + grv, max_vspd);		
+		vspd = min(vspd + grv, max_vspd);
+		
+		if(key_dash && dash) {
+			x += sign(hspd) * 100;
+			dash = false;
+		}
 	}
 	
 	if(key_jump) {

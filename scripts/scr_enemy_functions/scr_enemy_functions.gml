@@ -30,6 +30,7 @@ function enemy_set_colision() {
 		if(hspd < 0) {x = col.bbox_right + (x - bbox_left)}
 	
 		hspd *= -1;
+		timer = 300;
 	}
 
 	x += hspd;

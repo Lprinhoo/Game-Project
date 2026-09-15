@@ -9,7 +9,7 @@ function player_get_control() {
 	key_jump = keyboard_check(vk_space);
 		key_jump = clamp(key_jump, 0, 1);
 		
-	key_dash = keyboard_check(vk_shift);
+	key_dash = keyboard_check_pressed(vk_shift);
 		key_dash = clamp(key_dash, 0, 1);
 	
 }
@@ -89,7 +89,7 @@ function player_set_moviment() {
 		vspd = min(vspd + grv, max_vspd);
 		
 		if(key_dash && dash) {
-			x += sign(hspd) * 100;
+			x += sign(hspd) * 150;
 			dash = false;
 		}
 	}

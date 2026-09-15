@@ -47,6 +47,7 @@
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"scr_enemy_functions","path":"scripts/scr_enemy_functions/scr_enemy_functions.yy",},},
     {"id":{"name":"scr_player_functions","path":"scripts/scr_player_functions/scr_player_functions.yy",},},
+    {"id":{"name":"scr_hole","path":"sprites/scr_hole/scr_hole.yy",},},
     {"id":{"name":"spr_enemy_idle","path":"sprites/spr_enemy_idle/spr_enemy_idle.yy",},},
     {"id":{"name":"spr_enemy_move","path":"sprites/spr_enemy_move/spr_enemy_move.yy",},},
     {"id":{"name":"spr_player_dash","path":"sprites/spr_player_dash/spr_player_dash.yy",},},
